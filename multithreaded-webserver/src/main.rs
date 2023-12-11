@@ -14,11 +14,14 @@ use myhttpserver::ThreadPool;
 const HELP: &'static str = "
 webserver establishes a multithreaded webserver.
 Usage: 
-  webserver <SERVER_ADDRESS>
+  webserver <SERVER_ADDRESS> <HTML_FILEPATH> <POOL_SIZE>
 
 Options:
   -h, --help      print this help menu
   --version       print version
+
+Environment Variables:
+  PAGE_404=<HTML_FILEPATH> custom path to the html 404 error page.
 ";
 
 fn main() {
